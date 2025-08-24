@@ -15,10 +15,15 @@ with source_data as (
     union all
     select null as id
 
-)
+), 
+
+cte as
+(select 22 as id)
 
 select *
 from source_data
+union 
+select * from cte
 
 /*
     Uncomment the line below to remove records with null `id` values
